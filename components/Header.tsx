@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Header: React.FC = () => {
@@ -11,7 +10,7 @@ const Header: React.FC = () => {
             <path d="M10 18a2.5 2.5 0 002.5-2.5h-5A2.5 2.5 0 0010 18z" />
           </svg>
           <h1 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-tight">
-            Chef Gemini
+            Chef Gee
           </h1>
         </div>
         <p className="mt-1 text-slate-500">Your Personal AI Sous-Chef</p>

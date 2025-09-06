@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 interface IngredientInputProps {
@@ -50,11 +49,18 @@ const IngredientInput: React.FC<IngredientInputProps> = ({ ingredients, setIngre
     <div>
       <div className="flex flex-wrap items-center gap-2 p-3 bg-slate-100 border border-slate-300 rounded-lg focus-within:ring-2 focus-within:ring-emerald-500 focus-within:border-emerald-500">
         {ingredients.map((ingredient) => (
-          <div key={ingredient} className="flex items-center bg-emerald-100 text-emerald-800 text-sm font-medium px-3 py-1 rounded-full">
+          <div 
+            key={ingredient} 
+            className="flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-sm font-medium pl-3 pr-2 py-1 rounded-full border border-emerald-200 shadow-sm transition-all duration-200 ease-in-out hover:bg-emerald-200 hover:shadow-md hover:scale-105"
+          >
             <span>{ingredient}</span>
-            <button onClick={() => removeIngredient(ingredient)} className="ml-2 text-emerald-600 hover:text-emerald-800 focus:outline-none">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            <button 
+              onClick={() => removeIngredient(ingredient)} 
+              aria-label={`Remove ${ingredient}`}
+              className="rounded-full p-0.5 text-emerald-700 hover:bg-emerald-300/70 hover:text-emerald-900 transition-colors focus:outline-none focus:ring-1 focus:ring-emerald-500"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
